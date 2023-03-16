@@ -1,0 +1,23 @@
+.articleCart-container {
+  width: 100%;
+  height: 64px;
+
+  img {
+    width: 64px;
+  }
+
+  section {
+    margin: 0 auto 0 16px;
+  }
+
+  .quantity-div {
+    width: 96px;
+    height: 32px;
+
+    button,
+    p {
+      width: 32px;
+      background-color: $color-grey;
+    }
+  }
+}

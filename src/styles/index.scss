@@ -1,0 +1,26 @@
+@import "./reset.scss";
+@import "./settings.scss";
+
+@import "./pages/headphones.scss";
+@import "./pages/viewProduct.scss";
+
+@import "./components/header.scss";
+
+@import "./components/audiogear.scss";
+@import "./components/article.scss";
+@import "./components/articlePresentation.scss";
+@import "./components/category.scss";
+
+@import "./components/cart/cart.scss";
+
+@import "./components/gallery/gallery.scss";
+
+@import "./components/article/articleFeatures.scss";
+@import "./components/article/articleCart.scss";
+
+@import "./components/category/alsoLike.scss";
+
+@import "./components/banner/banner.scss";
+@import "./components/banner/bannerCategory.scss";
+
+@import "./components/button/button.scss";

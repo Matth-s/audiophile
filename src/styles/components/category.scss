@@ -1,0 +1,36 @@
+.category-container {
+  width: 1110px;
+  height: 284px;
+  margin: 0 auto 168px;
+
+  .category-div {
+    position: relative;
+    align-self: flex-end;
+    width: 350px;
+    height: 204px;
+    background-color: $color-grey;
+    cursor: pointer;
+
+    &:hover {
+      .shop-container {
+        p {
+          color: $color-orange;
+        }
+      }
+    }
+
+    .imageCategory {
+      position: absolute;
+      bottom: 124px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 140px;
+    }
+
+    section {
+      width: max-content;
+      height: 53px;
+      margin: 116px auto 0;
+    }
+  }
+}

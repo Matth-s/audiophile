@@ -1,0 +1,14 @@
+.gallery-container {
+  flex-flow: wrap column;
+  width: 100%;
+  height: 592px;
+  gap: 20px 29px;
+
+  .small {
+    width: 445px;
+  }
+
+  .large {
+    width: 635px;
+  }
+}

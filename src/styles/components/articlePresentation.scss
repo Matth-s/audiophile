@@ -1,0 +1,19 @@
+.articlePresentation-container {
+  height: auto;
+  width: 445px;
+
+  .newProduct {
+    display: block;
+    margin-bottom: 16px;
+    color: $color-orange;
+  }
+
+  .description {
+    margin: 32px 0 40px;
+    width: 445px;
+  }
+
+  .price {
+    margin-bottom: 47px;
+  }
+}

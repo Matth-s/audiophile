@@ -1,0 +1,28 @@
+.cart-container {
+  position: absolute;
+  right: 30px;
+  top: 129px;
+  z-index: 2;
+  padding: 31px;
+  width: 377px;
+  height: auto;
+  background-color: orange;
+
+  .headerCart-div {
+    width: 100%;
+    height: 25px;
+    margin-bottom: 32px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .articleCart-container:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  .total-div {
+    margin: 32px 0 28px;
+  }
+}

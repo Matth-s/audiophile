@@ -1,0 +1,28 @@
+.articleFeatures-container {
+  height: auto;
+  margin: 160px 0;
+  width: 100%;
+
+  h3 {
+    margin-bottom: 32px;
+  }
+
+  .features-section {
+    width: 635px;
+    height: auto;
+  }
+
+  ul {
+    width: 350px;
+    height: auto;
+
+    li:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    .quantity {
+      margin-right: 24px;
+      color: $color-orange;
+    }
+  }
+}

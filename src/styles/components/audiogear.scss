@@ -1,0 +1,72 @@
+.audiogear-container {
+  display: flex;
+  align-items: center;
+  width: 1110px;
+  height: 588px;
+  margin: 0 auto 200px;
+
+  section {
+    margin-right: auto;
+    width: 430px;
+    height: auto;
+
+    h2 {
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+
+    span {
+      color: $color-orange;
+    }
+
+    p {
+      color: rgba($color: #000000, $alpha: 0.8);
+    }
+  }
+
+  .image-div {
+    width: 540px;
+    height: 588px;
+    background-image: url(../../../public/assets/shared/desktop/image-best-gear.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  .container-audiogear {
+    width: 90%;
+
+    section {
+      width: 48%;
+    }
+
+    .image-div {
+      width: 48%;
+    }
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .container-audiogear {
+    flex-direction: column-reverse;
+    height: auto;
+    margin-bottom: 96px;
+
+    .image-div {
+      background-image: url(../../../public/assets/shared/tablet/image-best-gear.jpg);
+      width: 100%;
+      height: 300px;
+      margin-bottom: 64px;
+    }
+
+    section {
+      text-align: center;
+      width: 80%;
+      height: auto;
+      margin: auto;
+    }
+  }
+}
