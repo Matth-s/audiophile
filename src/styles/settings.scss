@@ -10,7 +10,8 @@ $color-grey: #f1f1f1;
   margin: auto;
 }
 
-button {
+button,
+input[type="radio"] {
   cursor: pointer;
 }
 
@@ -79,6 +80,13 @@ h6 {
   font-size: 13px;
   line-height: 18px;
   letter-spacing: 1px;
+}
+
+.body3 {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.214286px;
 }
 
 .border-radius {

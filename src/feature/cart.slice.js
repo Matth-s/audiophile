@@ -4,7 +4,7 @@ const CartSlice = createSlice({
   name: "cart",
   initialState: {
     cart: [],
-    total: 0,
+    total: 1,
   },
   reducers: {
     addArticleCart: (state, action) => {
@@ -41,6 +41,10 @@ const CartSlice = createSlice({
       const articleToRemove = state.cart.find((x) => x.slug === article);
       if (articleToRemove.quantity === 0) {
         state.cart = state.cart.filter((x) => x.slug !== article);
+      }
+
+      for (let i = 0; i > state.cart.length; i++) {
+        state.total += state[i].price * state.quantity;
       }
     },
 

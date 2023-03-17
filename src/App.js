@@ -9,10 +9,13 @@ import Headphones from "./pages/Headphones";
 import Home from "./pages/Home";
 import Speakers from "./pages/Speakers";
 import ViewProduct from "./pages/ViewProduct";
+import CheckOut from "./pages/CheckOut";
+import Error from "./pages/Error";
 
 function App() {
   const dispatch = useDispatch();
   const [appReady, setAppReady] = useState(false);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -28,7 +31,7 @@ function App() {
         })
         .catch((error) => {
           setAppReady(false);
-          console.log(error);
+          setError(true);
         });
     };
 
@@ -37,14 +40,17 @@ function App() {
 
   return (
     <>
-      {appReady && (
+      {appReady ? (
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/headphones" element={<Headphones />} />
           <Route path="/speakers" element={<Speakers />} />
           <Route path="/earphones" element={<Earphones />} />
           <Route path="/:category/:id" element={<ViewProduct />} />
+          <Route path="/checkout" element={<CheckOut />} />
         </Routes>
+      ) : (
+        error && <Error />
       )}
     </>
   );

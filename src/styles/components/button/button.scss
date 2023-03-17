@@ -11,12 +11,12 @@
   }
 }
 
-.goBack-container {
+.goBack-button {
   margin-bottom: 56px;
   background-color: transparent;
 }
 
-.removeCart-container {
+.removeCart-button {
   background-color: transparent;
 
   &:hover {
@@ -26,7 +26,7 @@
   }
 }
 
-.seeProduct-container {
+.seeProduct-button {
   width: max-content;
   height: 48px;
   padding: 0 30px;
@@ -34,7 +34,7 @@
   color: #fff;
 }
 
-.shop-container {
+.shop-button {
   width: 58px;
   height: 18px;
 
@@ -50,4 +50,12 @@
   height: 48px;
   background-color: $color-orange;
   color: #fff;
+}
+
+.reload-button {
+  width: max-content;
+  height: 48px;
+  background-color: $color-orange;
+  color: #fff;
+  padding: 0 24px;
 }

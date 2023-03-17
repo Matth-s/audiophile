@@ -8,7 +8,7 @@ const GoBack = () => {
   };
 
   return (
-    <button className="goBack-container" onClick={() => handleGoBack()}>
+    <button className="goBack-button" onClick={() => handleGoBack()}>
       Go Back
     </button>
   );

@@ -11,7 +11,9 @@ const AddToCart = ({ slug, price, image }) => {
   };
 
   const handleMenosQuantity = () => {
-    setQuantity(quantity - 1);
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
   };
 
   const handleAddQuantity = () => {
@@ -26,7 +28,7 @@ const AddToCart = ({ slug, price, image }) => {
         <button onClick={() => handleAddQuantity()}>+</button>
       </div>
       <button
-        className="seeProduct-container"
+        className="seeProduct-button"
         onClick={() => handleAddToCart({ slug, quantity, price, image })}
       >
         ADD TO CART

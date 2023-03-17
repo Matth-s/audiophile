@@ -10,7 +10,7 @@ const RemoveCart = ({ total }) => {
 
   return (
     <button
-      className={`removeCart-container ${total === 0 ? "inactive" : null}`}
+      className={`removeCart-button ${total === 0 ? "inactive" : null}`}
       onClick={() => handleRemoveCart()}
     >
       Remove All

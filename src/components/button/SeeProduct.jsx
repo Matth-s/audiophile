@@ -13,7 +13,7 @@ const SeeProduct = ({ slugArticle, category }) => {
 
   return (
     <button
-      className="seeProduct-container"
+      className="seeProduct-button"
       onClick={() => handleSeeProduct(slugArticle, category)}
     >
       SEE PRODUCT

@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import RemoveCart from "../button/RemoveCart";
 import ArticleCart from "../article/ArticleCart";
-import CheckOut from "../button/CheckOut";
+import GoCheckOut from "../button/GoCheckOut";
 
 const Cart = () => {
   const cartSelector = useSelector((state) => state.cart);
@@ -30,7 +30,7 @@ const Cart = () => {
         <p>$ {total}</p>
       </div>
 
-      <CheckOut total={total} />
+      <GoCheckOut total={total} />
     </div>
   );
 };
