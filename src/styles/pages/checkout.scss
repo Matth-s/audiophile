@@ -1,0 +1,25 @@
+.checkout-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  background-color: $color-grey;
+
+  .empty-div {
+    margin: auto;
+  }
+
+  .checkout-div {
+    width: 1110px;
+    height: auto;
+    margin: 79px auto 141px;
+  }
+
+  .recapArticle-div {
+    margin: 32px 0;
+  }
+
+  .articleCart-container:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}

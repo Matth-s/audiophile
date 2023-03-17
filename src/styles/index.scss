@@ -3,6 +3,8 @@
 
 @import "./pages/headphones.scss";
 @import "./pages/viewProduct.scss";
+@import "./pages/checkout.scss";
+@import "./pages/home.scss";
 @import "./pages/error.scss";
 
 @import "./components/header.scss";
@@ -12,7 +14,10 @@
 @import "./components/articlePresentation.scss";
 @import "./components/category.scss";
 
+@import "./components/footer/footer.scss";
+
 @import "./components/cart/cart.scss";
+@import "./components/cart/recapCart.scss";
 
 @import "./components/gallery/gallery.scss";
 
