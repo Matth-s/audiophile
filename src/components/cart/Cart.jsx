@@ -9,7 +9,7 @@ const Cart = () => {
   const total = cartSelector.total;
 
   return (
-    <div className="cart-container border-radius">
+    <div className="cart-container border-radius" data-testid="cart-container">
       <div className="headerCart-div flex flex__spaceBtw">
         <h6>Cart ({cart.length})</h6>
         <RemoveCart total={total} />
