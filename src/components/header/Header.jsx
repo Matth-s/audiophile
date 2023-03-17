@@ -1,10 +1,14 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
-import Cart from "../cart/Cart";
+import { NavLink, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { links } from "../../utils/Links";
+
+import Cart from "../cart/Cart";
 
 const Header = () => {
   const [isOpenCart, setIsOpenCart] = useState(false);
+  const location = useLocation();
+  const url = location.pathname;
 
   const toggleCart = () => {
     setIsOpenCart((prev) => !prev);
@@ -29,18 +33,17 @@ const Header = () => {
         <img src="/assets/shared/desktop/logo.svg" alt="logo audiophile" />
         <nav>
           <ul className="flex">
-            <NavLink to="/">
-              <li>HOME</li>
-            </NavLink>
-            <NavLink to="/headphones">
-              <li>HEADPHONES</li>
-            </NavLink>
-            <NavLink to="/speakers">
-              <li>SPEAKERS</li>
-            </NavLink>
-            <NavLink to="/earphones">
-              <li>EARPHONES</li>
-            </NavLink>
+            {links.map((link) => (
+              <NavLink key={link.name} to={link.directed}>
+                <li
+                  className={`link ${
+                    url.includes(link.name) ? "link__active" : null
+                  }`}
+                >
+                  {link.name}
+                </li>
+              </NavLink>
+            ))}
           </ul>
         </nav>
         <img

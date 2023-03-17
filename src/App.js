@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { setData } from "./feature/article.slice";
@@ -29,7 +29,7 @@ function App() {
             setAppReady(true);
           }
         })
-        .catch((error) => {
+        .catch(() => {
           setAppReady(false);
           setError(true);
         });
@@ -42,12 +42,13 @@ function App() {
     <>
       {appReady ? (
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/headphones" element={<Headphones />} />
           <Route path="/speakers" element={<Speakers />} />
           <Route path="/earphones" element={<Earphones />} />
           <Route path="/:category/:id" element={<ViewProduct />} />
           <Route path="/checkout" element={<CheckOut />} />
+          <Route path="/*" element={<Navigate to="/home" />} />
         </Routes>
       ) : (
         error && <Error />

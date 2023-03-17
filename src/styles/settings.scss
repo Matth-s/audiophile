@@ -93,6 +93,23 @@ h6 {
   border-radius: 8px;
 }
 
+.link {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 25px;
+  letter-spacing: 2px;
+  color: #fff;
+
+  &:hover {
+    color: rgba($color: $color-orange, $alpha: 0.8);
+  }
+
+  &__active {
+    color: $color-orange;
+  }
+}
+
 .inactive {
   pointer-events: none;
   opacity: 0.5;

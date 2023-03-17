@@ -1,28 +1,28 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+import { links } from "../../utils/Links";
 
 const Footer = () => {
+  const location = useLocation();
+  const url = location.pathname;
+
   return (
     <footer className="footer-container">
       <div className="footer-div">
         <span></span>
         <nav>
-          <NavLink to="/">
-            <img src="/assets/shared/desktop/logo.svg" alt="audiophile" />
-          </NavLink>
-
+          <img src="/assets/shared/desktop/logo.svg" alt="audiophile" />
           <ul>
-            <NavLink to="/">
-              <li className="link">HOME</li>
-            </NavLink>
-            <NavLink to="/headphones">
-              <li className="link">HEADPHONES</li>
-            </NavLink>
-            <NavLink to="/speakers">
-              <li className="link">SPEAKERS</li>
-            </NavLink>
-            <NavLink to="/earphones">
-              <li className="link">EARPHONES</li>
-            </NavLink>
+            {links.map((link) => (
+              <NavLink key={link.name} to={link.directed}>
+                <li
+                  className={`link ${
+                    url.includes(link.name) ? "link__active" : null
+                  }`}
+                >
+                  {link.name}
+                </li>
+              </NavLink>
+            ))}
           </ul>
         </nav>
 

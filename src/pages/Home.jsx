@@ -4,7 +4,13 @@ import Header from "../components/header/Header";
 import Category from "../components/category/Category";
 import Footer from "../components/footer/Footer";
 
+import { useEffect } from "react";
+import { scrollTop } from "../feature/scrollTop";
+
 const Home = () => {
+  useEffect(() => {
+    scrollTop();
+  }, []);
   return (
     <div className="home-container">
       <Header />

@@ -8,14 +8,6 @@
     margin: auto;
     height: 313px;
 
-    li {
-      color: #fff;
-
-      &:hover {
-        color: $color-orange;
-      }
-    }
-
     p {
       color: rgba($color: #fff, $alpha: 0.8);
     }
