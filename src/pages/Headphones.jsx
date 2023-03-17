@@ -2,6 +2,7 @@ import Header from "../components/header/Header";
 import BannerCategory from "../components/banner/BannerCategory";
 import AudioGear from "../components/audiogear/AudioGear";
 import Article from "../components/article/Article";
+import Footer from "../components/footer/Footer";
 
 import { useSelector } from "react-redux";
 import { scrollTop } from "../feature/scrollTop";
@@ -27,6 +28,7 @@ const Headphones = () => {
         )}
       </div>
       <AudioGear />
+      <Footer />
     </div>
   );
 };

@@ -27,7 +27,6 @@ const CheckOut = () => {
           <GoHome />
         </div>
       )}
-
       <Footer />
     </div>
   );

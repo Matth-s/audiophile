@@ -4,6 +4,9 @@ import Category from "../components/category/Category";
 import AudioGear from "../components/audiogear/AudioGear";
 import AlsoLike from "../components/category/AlsoLike";
 import GoBack from "../components/button/GoBack";
+import Footer from "../components/footer/Footer";
+import ArticleFeatures from "../components/article/ArticleFeatures";
+import Gallery from "../components/gallery/Gallery";
 
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
@@ -11,8 +14,6 @@ import { useLocation } from "react-router-dom";
 import { setViewArticle } from "../feature/article.slice";
 
 import { scrollTop } from "../feature/scrollTop";
-import ArticleFeatures from "../components/article/ArticleFeatures";
-import Gallery from "../components/gallery/Gallery";
 
 const ViewProduct = () => {
   const dispatch = useDispatch();
@@ -54,6 +55,7 @@ const ViewProduct = () => {
           <AudioGear />
         </div>
       )}
+      <Footer />
     </div>
   );
 };
