@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-const GoHome = () => {
+const BackHome = () => {
   const navigate = useNavigate();
 
   const handleGoHome = () => {
@@ -8,10 +8,10 @@ const GoHome = () => {
   };
 
   return (
-    <button className="goHome-button" onClick={() => handleGoHome()}>
-      Go Home
+    <button className="backToHome-button" onClick={() => handleGoHome()}>
+      BACK TO HOME
     </button>
   );
 };
 
-export default GoHome;
+export default BackHome;

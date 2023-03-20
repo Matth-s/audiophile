@@ -1,6 +1,8 @@
 $color-orange: #d87d4a;
+$color-orange-hover: #fbaf85;
 $color-black-grey: #191919;
 $color-grey: #f1f1f1;
+$color-red: #cd2c2c;
 
 #root {
   position: relative;
@@ -11,7 +13,8 @@ $color-grey: #f1f1f1;
 }
 
 button,
-input[type="radio"] {
+input[type="radio"],
+input[type="submit"] {
   cursor: pointer;
 }
 

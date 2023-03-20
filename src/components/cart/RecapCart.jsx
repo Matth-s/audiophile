@@ -17,7 +17,7 @@ const RecapCart = () => {
       <ul>
         <li>
           <p className="body1">TOTAL</p>
-          <h6>${total}</h6>
+          <h6>${total.toLocaleString()}</h6>
         </li>
         <li>
           <p className="body1">SHIPPING</p>
@@ -25,11 +25,11 @@ const RecapCart = () => {
         </li>
         <li>
           <p className="body1">VAT (INCLUDED)</p>
-          <h6>${total / 5}</h6>
+          <h6>${(total / 5).toLocaleString()}</h6>
         </li>
         <li>
           <p className="body1">GRAND TOTAL</p>
-          <h6>${total + 50}</h6>
+          <h6>${(total + 50).toLocaleString()}</h6>
         </li>
       </ul>
     </div>

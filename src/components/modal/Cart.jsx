@@ -14,7 +14,7 @@ const Cart = () => {
 
   useEffect(() => {
     dispatch(totalCart());
-  }, [cart]);
+  }, [cart, dispatch]);
 
   return (
     <div className="cart-container border-radius" data-testid="cart-container">
@@ -35,7 +35,7 @@ const Cart = () => {
 
       <div className="total-div flex flex__spaceBtw">
         <p>TOTAL</p>
-        <p>$ {total}</p>
+        <p>$ {total.toLocaleString()}</p>
       </div>
 
       <GoCheckOut total={total} />

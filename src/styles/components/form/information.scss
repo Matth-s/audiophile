@@ -1,8 +1,21 @@
 .information-container {
   width: 730px;
-  height: 1126px;
+  height: auto;
   background-color: #fff;
   padding: 54px 48px 48px;
+
+  form {
+    width: 100%;
+    height: auto;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    height: 48px;
+    background-color: $color-orange;
+    color: #fff;
+    margin-top: 30px;
+  }
 
   .input {
     height: 56px;
@@ -18,6 +31,14 @@
     &__medium {
       width: 309px;
     }
+
+    &__error {
+      border: 1px solid $color-red;
+    }
+  }
+
+  .error {
+    border: 1px solid $color-red;
   }
 
   label {
@@ -70,6 +91,21 @@
         margin: 0 0 0 10px;
         width: 309px;
         height: 56px;
+      }
+    }
+  }
+
+  .payment-div {
+    width: 100%;
+    height: auto;
+
+    .e-money-div {
+      column-gap: 16px;
+    }
+
+    .cash-div {
+      img {
+        margin-right: 32px;
       }
     }
   }

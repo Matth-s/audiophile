@@ -7,16 +7,11 @@
 @import "./pages/home.scss";
 @import "./pages/error.scss";
 
-@import "./components/header.scss";
-
-@import "./components/audiogear.scss";
-@import "./components/article.scss";
-@import "./components/articlePresentation.scss";
-@import "./components/category.scss";
-
 @import "./components/footer/footer.scss";
 
-@import "./components/cart/cart.scss";
+@import "./components/modal/cart.scss";
+@import "./components/modal/order.scss";
+
 @import "./components/cart/recapCart.scss";
 
 @import "./components/gallery/gallery.scss";
@@ -24,8 +19,11 @@
 @import "./components/article/articleFeatures.scss";
 @import "./components/article/articleCart.scss";
 @import "./components/article/notFound.scss";
+@import "./components/article/article.scss";
+@import "./components/article/articlePresentation.scss";
 
 @import "./components/category/alsoLike.scss";
+@import "./components/category/category.scss";
 
 @import "./components/banner/banner.scss";
 @import "./components/banner/bannerCategory.scss";
@@ -33,3 +31,7 @@
 @import "./components/form/information.scss";
 
 @import "./components/button/button.scss";
+
+@import "./components/header/header.scss";
+
+@import "./components/audiogear/audiogear.scss";

@@ -3,7 +3,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { links } from "../../utils/Links";
 
-import Cart from "../cart/Cart";
+import Cart from "../modal/Cart";
 
 const Header = () => {
   const [isOpenCart, setIsOpenCart] = useState(false);

@@ -4,11 +4,16 @@ import GoBack from "../components/button/GoBack";
 import RecapCart from "../components/cart/RecapCart";
 import Footer from "../components/footer/Footer";
 import GoHome from "../components/button/GoHome";
+import Order from "../components/modal/Order";
 
 import { useSelector } from "react-redux";
+import { useState } from "react";
 
 const CheckOut = () => {
-  const cart = useSelector((state) => state.cart.cart);
+  const selectorCart = useSelector((state) => state.cart);
+  const cart = selectorCart.cart;
+  const total = selectorCart.total;
+  const [openOrder, setOpenOrder] = useState(false);
 
   return (
     <div className="checkout-container flex flex__column">
@@ -17,7 +22,7 @@ const CheckOut = () => {
         <div className="checkout-div">
           <GoBack />
           <div className="flex flex__spaceBtw">
-            <Information />
+            <Information setOpenOrder={setOpenOrder} />
             <RecapCart />
           </div>
         </div>
@@ -28,6 +33,7 @@ const CheckOut = () => {
         </div>
       )}
       <Footer />
+      {openOrder && <Order total={total} cart={cart} />}
     </div>
   );
 };
