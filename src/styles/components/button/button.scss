@@ -26,18 +26,9 @@
   }
 }
 
-.seeProduct-button {
-  width: max-content;
-  height: 48px;
-  padding: 0 30px;
-  background-color: $color-orange;
-  color: #fff;
-}
-
 .shop-button {
   width: 58px;
   height: 18px;
-
   margin: 15px auto 0;
 
   p {
@@ -52,10 +43,18 @@
   color: #fff;
 }
 
-.reload-button {
+.goHome-button {
+  margin: 30px 0 0;
+}
+
+.goHome-button,
+.reload-button,
+.seeProduct-button {
   width: max-content;
   height: 48px;
   background-color: $color-orange;
   color: #fff;
   padding: 0 24px;
 }
+
+// reload button

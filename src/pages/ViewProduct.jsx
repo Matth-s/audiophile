@@ -11,16 +11,15 @@ import Gallery from "../components/gallery/Gallery";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { setViewArticle } from "../feature/article.slice";
 
+import { setViewArticle } from "../feature/article.slice";
 import { scrollTop } from "../feature/scrollTop";
+import NotFound from "../components/article/NotFound";
 
 const ViewProduct = () => {
   const dispatch = useDispatch();
-
   const article = useSelector((state) => state.article.viewArticle);
   const location = useLocation();
-
   const url = location.pathname;
   const slug = url.split("/").pop();
 
@@ -32,29 +31,32 @@ const ViewProduct = () => {
   }, [url, slug, dispatch]);
 
   return (
-    <div className="viewProduct-container">
+    <div className="viewProduct-container flex flex__column">
       <Header />
-      {article.length !== 0 && (
-        <div className="viewProduct-div">
-          <GoBack />
-          <Article article={article} />
-          <ArticleFeatures
-            description={article.features}
-            includes={article.includes}
-          />
-          <Gallery image={article.gallery} />
-          <div className="asloLike-div">
-            <h3>YOU MAY ALSO LIKE</h3>
-            <div className="flex flex__spaceBtw">
-              {article.others.map((other) => (
-                <AlsoLike key={other.name} otherItem={other} />
-              ))}
+      {article.length !== 0 &&
+        (article.status === undefined ? (
+          <div className="viewProduct-div">
+            <GoBack />
+            <Article article={article} />
+            <ArticleFeatures
+              description={article.features}
+              includes={article.includes}
+            />
+            <Gallery image={article.gallery} />
+            <div className="asloLike-div">
+              <h3>YOU MAY ALSO LIKE</h3>
+              <div className="flex flex__spaceBtw">
+                {article.others.map((other) => (
+                  <AlsoLike key={other.name} otherItem={other} />
+                ))}
+              </div>
             </div>
+            <Category />
+            <AudioGear />
           </div>
-          <Category />
-          <AudioGear />
-        </div>
-      )}
+        ) : (
+          <NotFound slug={slug} />
+        ))}
       <Footer />
     </div>
   );

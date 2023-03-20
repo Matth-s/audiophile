@@ -11,7 +11,12 @@ const articleSlice = createSlice({
       state.data = action.payload;
     },
     setViewArticle: (state, action) => {
-      state.viewArticle = state.data.find((x) => x.slug === action.payload);
+      const findArticle = state.data.find((x) => x.slug === action.payload);
+      if (findArticle) {
+        state.viewArticle = findArticle;
+      } else {
+        state.viewArticle = { status: "Error" };
+      }
     },
   },
 });

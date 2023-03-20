@@ -1,12 +1,20 @@
-import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { totalCart } from "../../feature/cart.slice";
+
 import RemoveCart from "../button/RemoveCart";
 import ArticleCart from "../article/ArticleCart";
 import GoCheckOut from "../button/GoCheckOut";
 
 const Cart = () => {
+  const dispatch = useDispatch();
   const cartSelector = useSelector((state) => state.cart);
   const cart = cartSelector.cart;
   const total = cartSelector.total;
+
+  useEffect(() => {
+    dispatch(totalCart());
+  }, [cart]);
 
   return (
     <div className="cart-container border-radius" data-testid="cart-container">
