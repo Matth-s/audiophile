@@ -39,6 +39,10 @@
     overflow-y: hidden;
   }
 
+  .changeHeight {
+    height: auto;
+  }
+
   .othersItem-div {
     margin-top: 12px;
     text-align: center;
@@ -57,11 +61,11 @@
     height: auto;
     background-color: #000000;
     border-radius: 0 8px 8px 0;
-    padding: 0 0 41px 32px;
+    padding: 0 0 40px 32px;
   }
 
   .total-div {
-    align-self: flex-end;
+    align-self: center;
     color: #fff;
     width: max-content;
     height: 57px;
@@ -70,5 +74,9 @@
       opacity: 0.6;
       margin-bottom: 8px;
     }
+  }
+
+  .changePosition {
+    align-self: flex-end;
   }
 }

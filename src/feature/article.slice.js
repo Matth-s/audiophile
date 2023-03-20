@@ -10,6 +10,7 @@ const articleSlice = createSlice({
     setData: (state, action) => {
       state.data = action.payload;
     },
+
     setViewArticle: (state, action) => {
       const findArticle = state.data.find((x) => x.slug === action.payload);
       if (findArticle) {

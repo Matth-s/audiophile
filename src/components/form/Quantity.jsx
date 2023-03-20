@@ -1,11 +1,13 @@
 import { useDispatch } from "react-redux";
 import { controlQuantity } from "../../feature/cart.slice";
+import { controlQuantityLocalStorage } from "../../feature/localStorage.js";
 
 const Quantity = ({ article }) => {
   const dispatch = useDispatch();
 
   const setQuantity = ({ slug, action }) => {
     dispatch(controlQuantity({ slug, action }));
+    controlQuantityLocalStorage(slug, action);
   };
 
   return (

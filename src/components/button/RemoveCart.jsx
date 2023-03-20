@@ -1,11 +1,13 @@
 import { useDispatch } from "react-redux";
 import { removeCart } from "../../feature/cart.slice";
+import { removeLocalStorage } from "../../feature/localStorage";
 
 const RemoveCart = ({ total }) => {
   const dispatch = useDispatch();
 
   const handleRemoveCart = () => {
     dispatch(removeCart());
+    removeLocalStorage();
   };
 
   return (

@@ -1,7 +1,8 @@
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { setData } from "./feature/article.slice";
+
 import axios from "axios";
 
 import Earphones from "./pages/Earphones";
@@ -13,6 +14,7 @@ import CheckOut from "./pages/CheckOut";
 import Error from "./pages/Error";
 
 function App() {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [appReady, setAppReady] = useState(false);
   const [error, setError] = useState(false);
@@ -30,6 +32,7 @@ function App() {
           }
         })
         .catch(() => {
+          navigate("/error");
           setAppReady(false);
           setError(true);
         });

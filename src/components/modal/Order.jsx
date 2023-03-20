@@ -16,10 +16,7 @@ const Order = ({ cart, total }) => {
         <p className="body1">You will receive an email confirmation shortly.</p>
         <div className="recap-div flex border-radius">
           <div className="left-div">
-            <div
-              className="recapItem-div"
-              style={{ height: seeMore ? "auto" : "64px" }}
-            >
+            <div className={`recapItem-div ${seeMore && "changeHeight"}`}>
               {cart.map((item) => (
                 <ArticleCart key={item.slug} article={item} />
               ))}
@@ -37,7 +34,7 @@ const Order = ({ cart, total }) => {
             )}
           </div>
           <div className="right-div flex">
-            <div className="total-div">
+            <div className={`total-div ${seeMore && "changePosition"}`}>
               <p>GRAND TOTAL</p>
               <h6>$ {total.toLocaleString()}</h6>
             </div>
