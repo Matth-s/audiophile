@@ -38,6 +38,10 @@ function App() {
         });
     };
 
+    window.localStorage.cart
+      ? console.log("null")
+      : window.localStorage.setItem("cart", JSON.stringify([]));
+
     fetchData();
   }, []);
 

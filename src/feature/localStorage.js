@@ -1,11 +1,17 @@
 export const addItemLocalStorage = (item) => {
+  let cart = JSON.parse(window.localStorage.getItem("cart"));
+
+  console.log(cart);
+  if (cart === null) {
+    window.localStorage.setItem("cart", JSON.stringify([]));
+    cart = JSON.parse(window.localStorage.getItem("cart"));
+  }
+
   const object = {
     slug: item.slug,
     quantity: item.quantity,
   };
   let findItem = false;
-
-  let cart = JSON.parse(window.localStorage.getItem("cart"));
 
   cart = cart.map((itemCart) => {
     if (itemCart.slug === object.slug) {
@@ -27,6 +33,16 @@ export const addItemLocalStorage = (item) => {
 
 export const controlQuantityLocalStorage = (slug, action) => {
   let cart = JSON.parse(window.localStorage.getItem("cart"));
+
+  if (!cart) {
+    window.localStorage.setItem("cart", JSON.stringify([]));
+    cart = JSON.parse(window.localStorage.getItem("cart"));
+    cart.push({
+      slug: slug,
+      quantity: 1,
+    });
+    window.localStorage.cart = JSON.stringify(cart);
+  }
 
   cart = cart.map((item) => {
     if (item.slug === slug) {
