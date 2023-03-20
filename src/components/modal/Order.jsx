@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ArticleCart from "../article/ArticleCart";
 import BackHome from "../button/BackHome";
+
 const Order = ({ cart, total }) => {
   const [seeMore, setSeeMore] = useState(false);
 
@@ -23,7 +24,6 @@ const Order = ({ cart, total }) => {
                 <ArticleCart key={item.slug} article={item} />
               ))}
             </div>
-
             {cart.length > 1 && (
               <div className="othersItem-div">
                 {seeMore ? (
@@ -43,7 +43,6 @@ const Order = ({ cart, total }) => {
             </div>
           </div>
         </div>
-
         <BackHome />
       </div>
     </div>
