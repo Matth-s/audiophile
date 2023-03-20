@@ -19,17 +19,6 @@ const CartSlice = createSlice({
       }
     },
 
-    test: (state, action) => {
-      const localStorage = action.payload;
-      console.log(action.payload);
-
-      if (localStorage.length > 0) {
-        localStorage.map((item) => {
-          return console.log(item.slug);
-        });
-      }
-    },
-
     controlQuantity: (state, action) => {
       const article = action.payload.slug;
       const whatDo = action.payload.action;

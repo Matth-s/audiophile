@@ -11,6 +11,7 @@ export const addItemLocalStorage = (item) => {
     slug: item.slug,
     quantity: item.quantity,
   };
+
   let findItem = false;
 
   cart = cart.map((itemCart) => {
