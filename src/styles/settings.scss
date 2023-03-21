@@ -129,6 +129,10 @@ h6 {
     justify-content: space-between;
   }
 
+  &__spaceAround {
+    justify-content: space-around;
+  }
+
   &__column {
     flex-direction: column;
   }

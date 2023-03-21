@@ -6,9 +6,9 @@ const SeeProduct = ({ slugArticle, category }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const handleSeeProduct = (slug, cat) => {
+  const handleSeeProduct = (slug, cate) => {
     dispatch(setViewArticle(slug));
-    navigate(`/${cat}/${slug}`);
+    navigate(`/${cate}/${slug}`);
   };
 
   return (

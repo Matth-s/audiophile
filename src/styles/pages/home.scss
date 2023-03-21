@@ -1,4 +1,96 @@
 .home-container {
   width: 100%;
   height: auto;
+
+  .list-div {
+    width: 1110px;
+    min-height: 20px;
+    height: auto;
+    margin: 0 auto 200px;
+  }
+
+  .speaker9-div:first-child {
+    position: relative;
+    padding-right: 95px;
+    overflow: hidden;
+    height: 560px;
+    background-color: $color-orange;
+    background-image: url(../../../public/assets/home/desktop/pattern-circles.svg);
+    background-size: 944px;
+    background-repeat: no-repeat;
+    background-position: left -149px top -36px;
+
+    .image-div {
+      position: absolute;
+      bottom: -10px;
+      left: 117px;
+      width: 410px;
+      height: 493px;
+      background-image: url(../../../public/assets/home/desktop/image-speaker-zx9.png);
+      background-size: 410px;
+    }
+
+    .articlePresentation-container {
+      margin-left: auto;
+      align-self: center;
+      width: 349px;
+      height: min-content;
+      background-color: transparent;
+
+      h2 {
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 58px;
+        color: #fff;
+      }
+
+      .description {
+        width: 100%;
+      }
+    }
+  }
+
+  .speaker7-div {
+    margin: 48px 0;
+    height: 320px;
+    padding-left: 95px;
+    background-image: url(../../../public/assets/home/desktop/image-speaker-zx7.jpg);
+
+    section {
+      align-self: center;
+      width: max-content;
+      height: 118px;
+
+      h4 {
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  .earphones-div {
+    height: 320px;
+
+    .background-div,
+    .section-div {
+      width: 540px;
+      height: 320px;
+    }
+
+    .background-div {
+      background-image: url(../../../public/assets/home/desktop/image-earphones-yx1.jpg);
+    }
+
+    .section-div {
+      padding-left: 95px;
+      background-color: $color-grey;
+
+      section {
+        align-self: center;
+
+        h4 {
+          margin-bottom: 32px;
+        }
+      }
+    }
+  }
 }

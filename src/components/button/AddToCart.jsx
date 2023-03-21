@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addArticleCart } from "../../feature/cart.slice";
-import { addItemLocalStorage } from "../../feature/localStorage";
 
 const AddToCart = ({ slug, price, image }) => {
   const dispatch = useDispatch();
@@ -9,7 +8,6 @@ const AddToCart = ({ slug, price, image }) => {
 
   const handleAddToCart = (item) => {
     dispatch(addArticleCart(item));
-    addItemLocalStorage(item);
   };
 
   const handleMenosQuantity = () => {

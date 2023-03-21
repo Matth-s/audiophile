@@ -2,10 +2,12 @@ import { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { links } from "../../utils/Links";
-
+import { useSelector } from "react-redux";
 import Cart from "../modal/Cart";
 
 const Header = () => {
+  const cartSelector = useSelector((state) => state.cart.cart);
+  const cartLength = cartSelector.length;
   const [isOpenCart, setIsOpenCart] = useState(false);
   const location = useLocation();
   const url = location.pathname;
@@ -46,12 +48,15 @@ const Header = () => {
             ))}
           </ul>
         </nav>
-        <img
-          onClick={() => toggleCart()}
-          className="cartImage"
-          src="/assets/shared/desktop/icon-cart.svg"
-          alt="cart"
-        />
+
+        <div className="imageDiv-cart" onClick={() => toggleCart()}>
+          <img
+            className="cartImage"
+            src="/assets/shared/desktop/icon-cart.svg"
+            alt="cart"
+          />
+          {cartLength > 0 && <span className="count">{cartLength}</span>}
+        </div>
       </div>
       {isOpenCart && (
         <>

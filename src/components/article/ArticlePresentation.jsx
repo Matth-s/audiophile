@@ -14,7 +14,7 @@ const ArticlePresentation = ({ presentation }) => {
       {presentation.new && (
         <span className="newProduct specialProduct">NEW PRODUCT</span>
       )}
-      <h2>{presentation.name}</h2>
+      <h2>{presentation.name.toUpperCase()}</h2>
       <p className="description">{presentation.description}</p>
 
       {isProductPage === null ? (
