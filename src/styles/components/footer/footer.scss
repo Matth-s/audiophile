@@ -80,7 +80,7 @@
 }
 
 @media screen and (max-width: 1180px) {
-  .container-footer {
+  .footer-container {
     .footer-div {
       width: 90%;
     }
@@ -88,15 +88,20 @@
 }
 
 @media screen and (max-width: 920px) {
-  .container-footer {
+  .footer-container {
     height: 400px;
 
     .footer-div {
       height: auto;
 
+      span {
+        width: 160px;
+        margin: 0 auto 48px;
+      }
+
       nav {
         height: 82px;
-        align-items: inherit;
+        align-items: center;
         flex-direction: column;
       }
 
@@ -110,21 +115,16 @@
 }
 
 @media screen and (max-width: 735px) {
-  .container-footer {
+  .footer-container {
     height: auto;
 
     .footer-div {
       height: auto;
 
-      span {
-        margin: 0 auto 48px;
-      }
-
       nav {
         justify-content: inherit;
         margin-bottom: 48px;
         width: 100%;
-        align-items: center;
         height: 221px;
 
         img {
@@ -163,7 +163,7 @@
           width: 90%;
         }
 
-        .scoial-div {
+        .social-div {
           align-items: inherit;
           margin: 0 auto 38px;
         }

@@ -13,8 +13,9 @@
   }
 
   ul {
-    width: 350px;
+    width: max-content;
     height: auto;
+    padding-right: 100px;
 
     li:not(:last-child) {
       margin-bottom: 12px;

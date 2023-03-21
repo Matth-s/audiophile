@@ -6,6 +6,7 @@ const Gallery = ({ image }) => {
         src={image.first.desktop}
         alt="gallery"
       />
+
       <img
         className="small border-radius"
         src={image.second.desktop}

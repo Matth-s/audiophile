@@ -3,18 +3,45 @@
   height: 633px;
   background-image: url(../../../../public/assets/home/desktop/image-hero.jpg);
   background-position: center top -150px;
-  background-size: 110% 800px;
+  background-size: 1600px 800px;
   color: #fff;
   margin-bottom: 120px;
 
   .banner-div {
     width: 1110px;
     margin: auto;
+  }
+
+  .articlePresentation-container {
+    .newProduct {
+      color: rgba($color: #fff, $alpha: 0.7);
+    }
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  .banner-container {
+    .banner-div {
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .banner-container {
+    background-image: url(../../../../public/assets/home/tablet/image-header.jpg);
+    background-size: 900px 740px;
+    background-position: center top -100px;
+
+    .banner-div {
+      width: max-content;
+    }
 
     .articlePresentation-container {
-      .newProduct {
-        color: rgba($color: #fff, $alpha: 0.7);
-      }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
   }
 }

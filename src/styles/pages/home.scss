@@ -126,3 +126,15 @@
     }
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .home-container {
+    .list-div {
+      width: 90%;
+    }
+
+    .category-container {
+      width: 90%;
+    }
+  }
+}

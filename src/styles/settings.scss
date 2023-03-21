@@ -155,3 +155,15 @@ h6 {
     flex-direction: row-reverse;
   }
 }
+
+@media screen and (max-width: 1460px) {
+  #root {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .article-div {
+    width: 90%;
+  }
+}

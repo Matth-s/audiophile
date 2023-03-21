@@ -12,3 +12,18 @@
     width: 635px;
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .gallery-container {
+    width: 100%;
+    border: 1px solid red;
+
+    .small {
+      width: 39%;
+    }
+
+    .large {
+      width: 56%;
+    }
+  }
+}

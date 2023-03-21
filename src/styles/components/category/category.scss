@@ -34,3 +34,13 @@
     }
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .category-container {
+    width: 100%;
+
+    .category-div {
+      width: 30%;
+    }
+  }
+}
