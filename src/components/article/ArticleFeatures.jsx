@@ -5,15 +5,18 @@ const ArticleFeatures = ({ description, includes }) => {
         <h3>FEATURES</h3>
         <p className="body1">{description}</p>
       </section>
-      <ul>
+
+      <section className="box-div">
         <h3>IN THE BOX</h3>
-        {includes.map((include) => (
-          <li className="flex" key={include.item}>
-            <p className="quantity body1">{include.quantity}X</p>
-            <p className="itemName body1">{include.item}</p>
-          </li>
-        ))}
-      </ul>
+        <ul>
+          {includes.map((include) => (
+            <li className="flex" key={include.item}>
+              <p className="quantity body1">{include.quantity}X</p>
+              <p className="itemName body1">{include.item}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
     </div>
   );
 };

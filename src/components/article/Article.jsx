@@ -14,8 +14,6 @@ const Article = ({ article }) => {
     };
   }, []);
 
-  console.log(article);
-
   useEffect(() => {
     switch (true) {
       case pageWidth > 860:

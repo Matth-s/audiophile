@@ -1,0 +1,26 @@
+.addToCart-container {
+  width: 298px;
+  height: 48px;
+
+  .quantity-div {
+    button,
+    p {
+      width: 40px;
+      background-color: $color-grey;
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .addToCart-container {
+    margin: auto;
+
+    .quantity-div {
+      button,
+      p {
+        width: 40px;
+        background-color: $color-grey;
+      }
+    }
+  }
+}

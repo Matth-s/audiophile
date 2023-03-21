@@ -12,7 +12,7 @@
     height: auto;
   }
 
-  ul {
+  .box-div {
     width: max-content;
     height: auto;
     padding-right: 100px;
@@ -24,6 +24,45 @@
     .quantity {
       margin-right: 24px;
       color: $color-orange;
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .articleFeatures-container {
+    .box-div {
+      padding-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .articleFeatures-container {
+    flex-direction: column;
+    gap: 120px;
+
+    .features-section {
+      width: 100%;
+    }
+
+    .box-div {
+      display: flex;
+
+      h3 {
+        width: 339px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .articleFeatures-container {
+    .box-div {
+      flex-direction: column;
+
+      h3 {
+        width: fit-content;
+      }
     }
   }
 }

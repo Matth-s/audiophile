@@ -42,6 +42,30 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
+      margin: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .banner-container {
+    background-image: url(../../../../public/assets/home/mobile/image-header.jpg);
+    background-size: 120% 120%;
+    background-position: center top -140px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .banner-container {
+    .banner-div {
+      width: 95%;
+    }
+    .articlePresentation-container {
+      width: 95%;
+
+      p {
+        width: 95%;
+      }
     }
   }
 }

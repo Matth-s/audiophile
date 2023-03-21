@@ -41,6 +41,38 @@
 
     .category-div {
       width: 30%;
+      height: 150px;
+
+      .imageCategory {
+        bottom: 80px;
+      }
+
+      section {
+        margin: 60px auto 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .category-container {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    gap: 80px;
+
+    .category-div {
+      align-self: unset;
+      width: 380px;
+      margin: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .category-container {
+    .category-div {
+      width: 100%;
     }
   }
 }
