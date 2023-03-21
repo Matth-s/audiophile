@@ -167,3 +167,11 @@ h6 {
     width: 90%;
   }
 }
+
+@media screen and (max-width: 950px) {
+  .article-div {
+    .article-container:nth-child(2n) {
+      flex-direction: column;
+    }
+  }
+}

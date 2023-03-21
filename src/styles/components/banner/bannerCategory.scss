@@ -9,3 +9,9 @@
     margin: auto;
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .bannerCategory-container {
+    margin-bottom: 120px;
+  }
+}
