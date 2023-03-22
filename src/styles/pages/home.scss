@@ -9,7 +9,7 @@
     margin: 0 auto 200px;
   }
 
-  .speaker9-div:first-child {
+  .speaker9-div {
     position: relative;
     padding-right: 95px;
     overflow: hidden;
@@ -65,6 +65,8 @@
     height: 320px;
     padding-left: 95px;
     background-image: url(../../../public/assets/home/desktop/image-speaker-zx7.jpg);
+    background-size: cover;
+    background-position: center;
 
     section {
       align-self: center;
@@ -99,6 +101,8 @@
 
     .background-div {
       background-image: url(../../../public/assets/home/desktop/image-earphones-yx1.svg);
+      background-size: cover;
+      background-position: center;
     }
 
     .section-div {
@@ -135,6 +139,112 @@
 
     .category-container {
       width: 90%;
+    }
+
+    .earphones-div {
+      .background-div,
+      .section-div {
+        width: 48%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1090px) {
+  .home-container {
+    .speaker9-div {
+      background-image: url(../../../public/assets/home/desktop/pattern-circles.svg);
+      background-size: 944px;
+      background-position: left -200px top -36px;
+
+      .image-div {
+        left: 60px;
+      }
+    }
+
+    .earphones-div {
+      .section-div {
+        padding: 0;
+      }
+
+      section {
+        margin: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .home-container {
+    .speaker9-div {
+      height: 720px;
+      background-position: center top -270px;
+      padding: 0;
+
+      .image-div {
+        width: 197px;
+        height: 237px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 52px;
+        background-image: url(../../../public/assets/home/tablet/image-speaker-zx9.png);
+        background-size: cover;
+      }
+
+      .articlePresentation-container {
+        margin: 353px auto 0;
+        width: 349px;
+        height: min-content;
+        background-color: transparent;
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .home-container {
+    .earphones-div {
+      .background-div {
+        background-image: url(../../../public/assets/home/mobile/image-earphones-yx1.jpg);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .home-container {
+    .earphones-div {
+      height: auto;
+      flex-direction: column;
+      gap: 24px;
+
+      .background-div,
+      .section-div {
+        width: 100%;
+        height: 320px;
+      }
+
+      section {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .home-container {
+    .speaker7-div {
+      padding: 0;
+
+      section {
+        margin: auto;
+        text-align: center;
+      }
+    }
+
+    .list-div {
+      margin: 0 auto 120px;
     }
   }
 }

@@ -36,7 +36,7 @@ const Footer = () => {
             </p>
             <p className="copy-rights">Copyright 2021. All Rights Reserved</p>
           </div>
-          <div className="social-div">
+          <ul className="social-div">
             <a href="#">
               <img
                 src="/assets/shared/desktop/icon-facebook.svg"
@@ -55,7 +55,7 @@ const Footer = () => {
                 alt="instagram media"
               />
             </a>
-          </div>
+          </ul>
         </div>
       </div>
     </footer>
