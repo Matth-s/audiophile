@@ -1,29 +1,29 @@
 .gallery-container {
-  flex-flow: wrap column;
   width: 100%;
-  height: 592px;
-  gap: 20px 29px;
+  height: auto;
+  gap: 30px;
 
-  .small {
-    width: 445px;
+  div {
+    width: 40%;
+    height: 100%;
+    gap: 32px;
   }
 
   .large {
-    width: 635px;
+    width: 56%;
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 600px) {
   .gallery-container {
-    width: 100%;
-    border: 1px solid red;
+    flex-direction: column;
 
-    .small {
-      width: 39%;
+    div {
+      width: 100%;
     }
 
     .large {
-      width: 56%;
+      width: 100%;
     }
   }
 }

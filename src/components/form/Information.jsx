@@ -132,7 +132,7 @@ const Information = ({ setOpenOrder }) => {
 
         <section>
           <h6>PAYMENTS DETAILS</h6>
-          <div className="flex flex__spaceBtw">
+          <div className="payment-div flex flex__spaceBtw">
             <label htmlFor="paymentMethod">Payment Method</label>
             <div>
               <div
@@ -165,9 +165,9 @@ const Information = ({ setOpenOrder }) => {
           </div>
         </section>
 
-        <div className="payment-div">
+        <div className="whatPayment-div flex">
           {paymentEmoney ? (
-            <div className="e-money-div flex">
+            <div className="e-money-div flex flex__spaceBtw">
               <div className="input-div">
                 <label htmlFor="eMoneyNumber">e-Money Number</label>
                 <input

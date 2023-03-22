@@ -21,7 +21,7 @@ const CheckOut = () => {
       {cart.length > 0 ? (
         <div className="checkout-div">
           <GoBack />
-          <div className="flex flex__spaceBtw">
+          <div className="main-div flex">
             <Information setOpenOrder={setOpenOrder} />
             <RecapCart />
           </div>

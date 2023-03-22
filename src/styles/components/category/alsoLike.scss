@@ -17,3 +17,22 @@
     width: 30%;
   }
 }
+
+@media screen and (max-width: 1080px) {
+  .alsoLike-container {
+    width: auto;
+    height: min-content;
+
+    img {
+      height: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .alsoLike-container {
+    h6 {
+      margin: 32px auto;
+    }
+  }
+}

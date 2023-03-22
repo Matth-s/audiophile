@@ -14,6 +14,7 @@ const Order = ({ cart, total }) => {
         />
         <h3>THANK YOU FOR YOUR ORDER</h3>
         <p className="body1">You will receive an email confirmation shortly.</p>
+
         <div className="recap-div flex border-radius">
           <div className="left-div">
             <div className={`recapItem-div ${seeMore && "changeHeight"}`}>
@@ -33,6 +34,7 @@ const Order = ({ cart, total }) => {
               </div>
             )}
           </div>
+
           <div className="right-div flex">
             <div className={`total-div ${seeMore && "changePosition"}`}>
               <p>GRAND TOTAL</p>
@@ -40,6 +42,7 @@ const Order = ({ cart, total }) => {
             </div>
           </div>
         </div>
+
         <BackHome />
       </div>
     </div>

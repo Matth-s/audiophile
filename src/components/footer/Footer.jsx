@@ -16,7 +16,7 @@ const Footer = () => {
               <NavLink key={link.name} to={link.directed}>
                 <li
                   className={`link ${
-                    url.includes(link.name) ? "link__active" : null
+                    url.includes(link.name) ? "link__active" : ""
                   }`}
                 >
                   {link.name}

@@ -9,7 +9,7 @@
     top: 65px;
     background-color: rgba($color: $color-black-grey, $alpha: 0.4);
     width: 100%;
-    height: 100vh;
+    height: calc(100% - 65px);
     z-index: 1;
   }
 
@@ -70,6 +70,7 @@
 
     .menu-image {
       cursor: pointer;
+      padding-bottom: 4px;
     }
 
     .category-container {
@@ -100,6 +101,16 @@
           height: 53px;
           margin: 84px auto 0;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .header-container {
+    .category-container {
+      .category-div {
+        width: 100%;
       }
     }
   }

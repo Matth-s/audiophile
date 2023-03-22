@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { addArticleCart } from "../../feature/cart.slice";
 
 const AddToCart = ({ slug, price, image }) => {
   const dispatch = useDispatch();
   const [quantity, setQuantity] = useState(1);
+
+  useEffect(() => {
+    setQuantity(1);
+  }, [slug]);
 
   const handleAddToCart = (item) => {
     dispatch(addArticleCart(item));

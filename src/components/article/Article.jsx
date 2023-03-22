@@ -16,14 +16,14 @@ const Article = ({ article }) => {
 
   useEffect(() => {
     switch (true) {
-      case pageWidth > 860:
+      case pageWidth > 770:
         setImage(article.image.desktop);
         break;
       default:
         setImage(article.image.mobile);
         break;
     }
-  }, [pageWidth]);
+  }, [pageWidth, article]);
 
   return (
     <div className="article-container flex flex__alignCenter flex__spaceBtw">

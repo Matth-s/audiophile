@@ -17,7 +17,17 @@ const Header = () => {
   const url = location.pathname;
 
   const toggleCart = () => {
+    if (openMenu) {
+      setOpenMenu(false);
+    }
     setIsOpenCart((prev) => !prev);
+  };
+
+  const toggleMenu = () => {
+    if (isOpenCart) {
+      setIsOpenCart(false);
+    }
+    setOpenMenu((prev) => !prev);
   };
 
   useEffect(() => {
@@ -43,26 +53,21 @@ const Header = () => {
     }
   }, [pageWidth]);
 
-  useEffect(() => {
-    if (isOpenCart || openMenu) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-  }, [isOpenCart, openMenu]);
-
   return (
     <header className="header-container flex">
       <div className="header-div flex flex__alignCenter">
         {pageWidth <= 840 && (
           <img
-            onClick={() => setOpenMenu((prev) => !prev)}
+            onClick={() => toggleMenu()}
             className="menu-image"
             src="/assets/shared/tablet/icon-hamburger.svg"
             alt="icon hamburger"
           />
         )}
-        <img src="/assets/shared/desktop/logo.svg" alt="logo audiophile" />
+
+        <NavLink to="/home">
+          <img src="/assets/shared/desktop/logo.svg" alt="logo audiophile" />
+        </NavLink>
 
         {pageWidth > 840 ? (
           <nav>
