@@ -38,7 +38,9 @@ const Cart = () => {
         <p>$ {total.toLocaleString()}</p>
       </div>
 
-      <GoCheckOut total={total} />
+      {!window.location.pathname.includes("checkout") && (
+        <GoCheckOut total={total} />
+      )}
     </div>
   );
 };
